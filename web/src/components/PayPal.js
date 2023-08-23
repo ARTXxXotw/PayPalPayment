@@ -5,8 +5,7 @@ export default function Paypal() {
   const [state,setstate]=useState("salom")
 
   useEffect(() => {
-    window.paypal
-      .Buttons({
+    window.paypal.Buttons({
         createOrder: (data, actions, err) => {
           return actions.order.create({
             intent: "CAPTURE",
@@ -28,8 +27,7 @@ export default function Paypal() {
         onError: (err) => {
           console.log(err);
         },
-      })
-      .render(paypal.current);
+      }).render(paypal.current);
   }, []);
 
   return (
