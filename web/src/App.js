@@ -1,19 +1,22 @@
-import React, { useState } from "react"
-import PayPal from "./components/PayPal"
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import PayPal from "./components/PayPal";
 
 function App() {
-
-
-  const [Checkout, setCheckout] = useState(false)
+  const [checkout, setCheckOut] = useState(false);
 
   return (
     <div className="App">
-
-      {Checkout ? (
-        <PayPal />
+      {checkout ? (
+        <PayPal/>
       ) : (
-        <button onClick={()=>{setCheckout(true)}}>Checkout</button>
+        <button
+          onClick={() => {
+            setCheckOut(true);
+          }}
+        >
+          Checkout
+        </button>
       )}
     </div>
   );
