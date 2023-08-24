@@ -5,8 +5,7 @@ import PayPal from "./components/PayPal";
 function App() {
   const [checkout, setCheckOut] = useState(false);
 
-  return (
-    <div className="App">
+  return  <div className="App">
       {checkout ? (
         <PayPal/>
       ) : (
@@ -19,7 +18,7 @@ function App() {
         </button>
       )}
     </div>
-  );
+  
 }
 
 export default App;
